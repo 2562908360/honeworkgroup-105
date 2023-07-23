@@ -25,6 +25,14 @@ The group 116
 >>   - ## 运行效果  
 >>     - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/b0071d01-2143-493c-b789-4279eec195ac)
 >>     - CPU：AMD Ryzen 9 5900HX with Radeon Graphics           3.30 GHz
+> # Project5  
+>> - # Project5实验说明
+>   - ## Merkle Tree
+>     - Merkle Tree，通常也被称作Hash Tree，顾名思义，就是存储hash值的一棵树。Merkle树的叶子是数据块(例如，文件或者文件的集合)的hash值。非叶节点是其对应子节点串联字符串的hash。
+>     - Merkle树看起来非常像二叉树，其叶子节点上的值通常为数据块的哈希值，而非叶子节点上的值，所以有时候Merkle tree也表示为Hash tree,如下图所示：
+>     - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/a475be82-eb59-4cec-825e-3c72366c0d20)
+>   - ## 实现步骤 
+
 
 
 
