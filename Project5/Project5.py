@@ -1,6 +1,7 @@
 import numpy as np
 import random
 import hashlib
+import time
 #默克尔树节点
 class MerkleTreeNode:
     def __init__(self, value):
@@ -82,6 +83,7 @@ class MerkleTree:
 
 
 if __name__ == '__main__':
+    start_time = time.perf_counter()
     leafdata = np.random.randint(low = 0, high = 10**6, size=10**5)  # 生成10万个随机数作为叶子结点的值
     leafhex = [ hex(i) for i in leafdata ] #将叶子节点值转换成16进制
     leafnode = [ MerkleTreeNode(i) for i in leafhex ]
@@ -100,3 +102,6 @@ if __name__ == '__main__':
     number3 = leafnode[1].value
     numberhash3 = hashlib.sha256((number3[0:2] + "00" + number3[2:]).encode('utf-8')).hexdigest()
     mt.proof(root,numberhash3)
+    end_time = time.perf_counter()
+    execution_time = (end_time - start_time) * 1000
+    print("执行时间为：", execution_time, "毫秒")
