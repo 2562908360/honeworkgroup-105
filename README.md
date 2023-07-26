@@ -25,6 +25,30 @@ The group 116
 >>   - ## 运行效果  
 >>     - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/b0071d01-2143-493c-b789-4279eec195ac)
 >>     - CPU：AMD Ryzen 9 5900HX with Radeon Graphics           3.30 GHz
+> # Project2
+>> - # Project2实验说明
+>>   - ## SM3
+>>     -   `ShangMi 3` (SM3)是中国国家标准中使用的加密散列函数。国家密码管理局于2010-12-17以“GM/T 0004-2012: SM3密码学哈希算法”的名称发布。
+>>     -   `SM3`用于实现数字签名、消息验证码和伪随机数生成器。该算法是公开的，在安全性和效率方面被认为与SHA-256相似。SM3与传输层安全一起使用。
+>>   - ## Rho
+>>     - https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm
+>>     - Rho 方法是一个简单的碰撞搜索算法，用于在SM3哈希函数中找到两个不同的消息（m1 和 m2），它们的前 exm 位SM3哈希值相同。
+>>     - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/f00c34a0-9ce0-44da-a13f-dac069e14e5b)
+>>     - 下面将介绍 Rho 方法的实现过程：
+>>       - 输入参数 `exm`：这个参数指定了要搜索碰撞的位数。在示例代码中，`exm` 设置为 16，表示搜索前16位的碰撞。
+>>       - 随机生成初始消息 `x`：首先，在范围 [0, 2^(exm+1)-1] 内随机生成一个整数，然后将其转换为16进制字符串作为初始消息 `x`。
+>>       - 对 `x` 进行迭代：通过调用 `SM3.SM3(x)`，计算消息 `x` 的SM3哈希值 `x_1`。然后再次计算 `x_1` 的SM3哈希值，得到 `x_2`。
+>>       - 碰撞搜索循环：在 `x_1` 和 `x_2` 的前 `num` 位（num 为 `exm` 的1/4）不相同的情况下，对 `x_1` 和 `x_2` 进行迭代，直到找到两者前 `num` 位相同的情况。此时得到的 `x_1` 和 `x_2` 就是碰撞消息。
+>>       - 返回结果：找到碰撞后，返回 `x_1` 和 `x_2` 的前 `num` 位SM3哈希值（表示为 `col`），以及 `x_1` 和 `x_2` 的原始消息。
+>>     - 在主程序中，使用 `Rho` 方法搜索前16位的碰撞，并计算执行时间。该算法只是一个简单的示例，不适用于实际应用。
+>>   - ## 运行效果
+>>   - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/6cf43a83-bf7e-4dfd-ba7c-834f7bad07df)
+>>   - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/3381c586-1929-461e-b7ce-904b0ccd8394)
+>>   - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/ee8b1254-21b0-404e-bd3e-9babfacbcd10)
+>>   - 16bit碰撞平均运行时间：
+>>   - CPU：AMD Ryzen 9 5900HX with Radeon Graphics           3.30 GHz
+
+
 > # Project5  
 >> - # Project5实验说明
 >>   - ## Merkle Tree
@@ -40,7 +64,7 @@ The group 116
 >>       - `Inorder(root)`: 这个方法用于中序遍历整个默克尔树，得到树中所有节点的值，并存储在 mtlist 列表中。
 >>       - `proof(root, nodevalue)`: 这个方法用于验证给定的节点值是否存在于默克尔树中。它通过调用 Inorder 方法得到整个树的节点值列表，并检查给定的节点值是否在其中，从而判断节点是否在树中。
 >>     - 主程序部分：在主程序中，首先生成 10**5 个随机整数作为叶子节点的值，并将其转换为对应的十六进制表示。然后，利用这些叶子节点值构建默克尔树，并输出树的根节点的值。接着，验证一些随机生成的节点值是否在默克尔树中，并输出验证结果。
->>   - ##运行效果:
+>>   - ## 运行效果:
 >>     - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/abf4e272-793a-403a-8925-dd163d6fbe00)
 >>     - 运行速度1.009s
 >>     - CPU：AMD Ryzen 9 5900HX with Radeon Graphics           3.30 GHz
