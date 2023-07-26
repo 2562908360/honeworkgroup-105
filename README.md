@@ -24,6 +24,7 @@ The group 116
 >>       - 一旦发现碰撞，可以获取碰撞的字符串和对应的哈希值，用于进一步分析和验证攻击的成功性。    
 >>   - ## 运行效果  
 >>     - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/b0071d01-2143-493c-b789-4279eec195ac)
+>>     - 运行时间 233ms
 >>     - CPU：AMD Ryzen 9 5900HX with Radeon Graphics           3.30 GHz
 > # Project2
 >> - # Project2实验说明
@@ -66,7 +67,7 @@ The group 116
 >>     - 主程序部分：在主程序中，首先生成 10**5 个随机整数作为叶子节点的值，并将其转换为对应的十六进制表示。然后，利用这些叶子节点值构建默克尔树，并输出树的根节点的值。接着，验证一些随机生成的节点值是否在默克尔树中，并输出验证结果。
 >>   - ## 运行效果:
 >>     - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/abf4e272-793a-403a-8925-dd163d6fbe00)
->>     - 运行速度1.009s
+>>     - 运行速度 1.009s
 >>     - CPU：AMD Ryzen 9 5900HX with Radeon Graphics           3.30 GHz
   
 
