@@ -45,7 +45,7 @@ The group 116
 >>   - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/6cf43a83-bf7e-4dfd-ba7c-834f7bad07df)
 >>   - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/3381c586-1929-461e-b7ce-904b0ccd8394)
 >>   - ![image](https://github.com/2562908360/honeworkgroup-116/assets/97723386/ee8b1254-21b0-404e-bd3e-9babfacbcd10)
->>   - 16bit碰撞平均运行时间：
+>>   - 16bit碰撞平均运行时间：143.928s
 >>   - CPU：AMD Ryzen 9 5900HX with Radeon Graphics           3.30 GHz
 
 
