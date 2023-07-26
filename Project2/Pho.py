@@ -23,7 +23,7 @@ def rho(exm):
 
 
 if __name__ == '__main__':
-    example = 16    # 此处进行前8bit的碰撞以作演示
+    example = 16    # 此处进行前16bit的碰撞以作演示
     start_time = time.perf_counter()
     col, m1, m2 = rho(example)
     end_time = time.perf_counter()
