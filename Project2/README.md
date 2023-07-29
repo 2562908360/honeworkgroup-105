@@ -1,3 +1,4 @@
+# implement the Rho method of reduced SM3
 # 使用教程
   - 将两个.py文件放在同一文件目录下，执行就可以。
 # 代码说明
